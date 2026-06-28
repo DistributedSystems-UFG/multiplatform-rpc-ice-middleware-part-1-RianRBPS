@@ -39,6 +39,30 @@ if 'PrinterPrx' not in _M_Demo.__dict__:
         def end_printString(self, _r):
             return _M_Demo.Printer._op_printString.end(self, _r)
 
+        def reverseString(self, s, context=None):
+            return _M_Demo.Printer._op_reverseString.invoke(self, ((s, ), context))
+
+        def reverseStringAsync(self, s, context=None):
+            return _M_Demo.Printer._op_reverseString.invokeAsync(self, ((s, ), context))
+
+        def begin_reverseString(self, s, _response=None, _ex=None, _sent=None, context=None):
+            return _M_Demo.Printer._op_reverseString.begin(self, ((s, ), _response, _ex, _sent, context))
+
+        def end_reverseString(self, _r):
+            return _M_Demo.Printer._op_reverseString.end(self, _r)
+
+        def countChars(self, s, context=None):
+            return _M_Demo.Printer._op_countChars.invoke(self, ((s, ), context))
+
+        def countCharsAsync(self, s, context=None):
+            return _M_Demo.Printer._op_countChars.invokeAsync(self, ((s, ), context))
+
+        def begin_countChars(self, s, _response=None, _ex=None, _sent=None, context=None):
+            return _M_Demo.Printer._op_countChars.begin(self, ((s, ), _response, _ex, _sent, context))
+
+        def end_countChars(self, _r):
+            return _M_Demo.Printer._op_countChars.end(self, _r)
+
         @staticmethod
         def checkedCast(proxy, facetOrContext=None, context=None):
             return _M_Demo.PrinterPrx.ice_checkedCast(proxy, '::Demo::Printer', facetOrContext, context)
@@ -71,6 +95,12 @@ if 'PrinterPrx' not in _M_Demo.__dict__:
         def printString(self, s, current=None):
             raise NotImplementedError("servant method 'printString' not implemented")
 
+        def reverseString(self, s, current=None):
+            raise NotImplementedError("servant method 'reverseString' not implemented")
+
+        def countChars(self, s, current=None):
+            raise NotImplementedError("servant method 'countChars' not implemented")
+
         def __str__(self):
             return IcePy.stringify(self, _M_Demo._t_PrinterDisp)
 
@@ -80,6 +110,8 @@ if 'PrinterPrx' not in _M_Demo.__dict__:
     Printer._ice_type = _M_Demo._t_PrinterDisp
 
     Printer._op_printString = IcePy.Operation('printString', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), None, ())
+    Printer._op_reverseString = IcePy.Operation('reverseString', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_string, False, 0),), (), None, ())
+    Printer._op_countChars = IcePy.Operation('countChars', Ice.OperationMode.Normal, Ice.OperationMode.Normal, False, None, (), (((), IcePy._t_int, False, 0),), (), None, ())
 
     _M_Demo.Printer = Printer
     del Printer

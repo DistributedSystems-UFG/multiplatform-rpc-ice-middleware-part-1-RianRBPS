@@ -15,4 +15,14 @@ print(rep)
 rep = printer2.printString("Hello World from printer2!")
 print(rep)
 
+rev1 = printer1.reverseString("Hello World from printer1!")
+print(f"Reversed by printer1: {rev1}")
+rev2 = printer2.reverseString("Hello World from printer2!")
+print(f"Reversed by printer2: {rev2}")
+
+count1 = printer1.countChars("Hello World from printer1!")
+print(f"Char count from printer1: {count1}")
+count2 = printer2.countChars("Hello World from printer2!")
+print(f"Char count from printer2: {count2}")
+
 communicator.waitForShutdown()

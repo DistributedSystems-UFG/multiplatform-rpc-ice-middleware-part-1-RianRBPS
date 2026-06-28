@@ -9,3 +9,9 @@ if not printer:
     raise RuntimeError("Invalid proxy")
 
 printer.printString("Hello World!")
+
+reversed_s = printer.reverseString("Hello World!")
+print(f"Reversed: {reversed_s}")
+
+count = printer.countChars("Hello World!")
+print(f"Character count: {count}")
